@@ -37,7 +37,7 @@
 
 3. Test frontend with cypress
 
-   > npm install cypress --save-dev
+   > npm install cypress --save-dev  
    > npx cypress open
 
 ## Urls
