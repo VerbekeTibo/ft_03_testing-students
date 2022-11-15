@@ -1,3 +1,4 @@
+// https://jestjs.io/docs/getting-started
 // https://jestjs.io/docs/api
 
 import { Register, Login } from "../auth"
