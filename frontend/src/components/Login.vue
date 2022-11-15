@@ -7,7 +7,7 @@ const string_to_display = ref("no user");
 async function onSubmit(values) {
   try {
     const { username, password } = values;
-    console.log({ username, password });
+    // console.log({ username, password });
     const res = await fetch("http://localhost:9000/login", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
@@ -15,7 +15,7 @@ async function onSubmit(values) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }), // body data type must match "Content-Type" header
+      // body: JSON.stringify({ username, password }), // body data type must match "Content-Type" header
     });
     const json = await res.json(); // parses JSON response into native JavaScript objects
 
@@ -34,11 +34,11 @@ async function onSubmit(values) {
     <Form @submit="onSubmit">
       <div class="form-group">
         <label>Username</label>
-        <Field name="marty" type="text" class="form-control" />
+        <Field name="username" type="text" class="form-control" />
       </div>
       <div class="form-group">
         <label>Password</label>
-        <Field name="password123" type="password123" class="form-control" />
+        <Field name="password" type="password" class="form-control" v-model="username" />
       </div>
       <div class="form-group">
         <button class="btn btn-primary" type="submit">Login</button>

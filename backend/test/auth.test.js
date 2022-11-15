@@ -18,6 +18,7 @@ describe('User flow', () => {
     it('Can login', () => {
         const token = Login("marty", "password123")
         expect(token).not.toBeNull()
+        // expect(token).toBe('')
     })
 
     it('Can\'t login with wrong password', () => {
